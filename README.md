@@ -30,7 +30,7 @@ cd giant-leap
 ```
 
 If it runs properly, the command should terminate with a green "BUILD SUCCESS" message.
-This means our archetype
+This means our archetype has been successfully installed to your local machine.
 
 #### Run the Maven Command
 
