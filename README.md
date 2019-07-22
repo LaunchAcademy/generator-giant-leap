@@ -10,6 +10,65 @@ Maven must be properly configured and installed. You must have maven in your pat
 ./install.sh
 ```
 
+## Generating a New Project
+
+There are two options for generating a new project using Giant Leap.
+
+### Option 1: Generating with Maven
+
+#### Clone the Repository
+
+```no-highlight
+git clone https://github.com/LaunchAcademy/giant-leap.git
+```
+
+#### Run ./install.sh
+
+```no-highlight
+cd giant-leap
+./install.sh
+```
+
+If it runs properly, the command should terminate with a green "BUILD SUCCESS" message.
+This means our archetype
+
+#### Run the Maven Command
+
+Determine the name of your project and substitute it in for the two `<downcased project name>` occurrences below.
+
+```no-highlight
+mvn archetype:generate -DarchetypeGroupId=com.launchacademy -DarchetypeArtifactId=giantleap -DgroupId=com.launchacademy -DartifactId=<downcased project name> -Dversion=1.0-SNAPSHOT -Dpackage=com.launchacademy.<downcased project name>
+```
+
+#### Update application.properties
+
+Update the contents of `application.properties` to reflect the database name of your choosing.
+
+#### Run the Project
+
+Attempt to run the `spring-boot:run` maven task and see if it successfully brings up a project for you.
+
+### Option 2: Clone the Repository Directly
+
+```no-highlight
+git clone https://github.com/LaunchAcademy/giant-leap.git
+mv giant-leap <project dir>
+cd <project dir>
+rm -rf .git
+idea .
+```
+
+1. Rename the `giantleap` package in `src/main/java/com/launchacademy` to a name of your choosing.
+1. Update all `package` directives and `import` directives to reflect this new package name. You can use project find & replace in either VS Code or Intellij
+1. Update your `application.properties` to point to the database of your choosing.
+1. Attempt to run the `spring-boot:run` maven task.
+1. Once the task runs successfully, initialize and commit to a new git repository.
+
+```no-highlight
+git init
+git commit -am 'initial commit'
+```
+
 ## Debugging
 
 ### Missing Settings.xml
