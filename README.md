@@ -61,6 +61,9 @@ idea .
 1. Rename the `giantleap` package in `src/main/java/com/launchacademy` to a name of your choosing.
 1. Update all `package` directives and `import` directives to reflect this new package name. You can use project find & replace in either VS Code or Intellij
 1. Update your `application.properties` to point to the database of your choosing.
+1. Update your `pom.xml`
+from: `<packaging>pom</packaging>` to: `  <packaging>war</packaging>`
+
 1. Attempt to run the `spring-boot:run` maven task.
 1. Once the task runs successfully, initialize and commit to a new git repository.
 
