@@ -2,3 +2,4 @@ node_modules
 coverage
 
 templates/src/frontend/node_modules
+generators/app/templates/.mvn/wrapper/maven-wrapper.jar

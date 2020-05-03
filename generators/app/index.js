@@ -2,6 +2,7 @@
 const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
+const path = require("path");
 
 module.exports = class extends Generator {
   prompting() {
@@ -15,12 +16,12 @@ module.exports = class extends Generator {
     );
 
     const prompts = [
-      {
-        type: "confirm",
-        name: "someAnswer",
-        message: "Would you like to enable this option?",
-        default: true
-      }
+      // {
+      //   type: "confirm",
+      //   name: "someAnswer",
+      //   message: "Would you like to enable this option?",
+      //   default: true
+      // }
     ];
 
     return this.prompt(prompts).then(props => {
@@ -30,13 +31,34 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath("dummyfile.txt"),
-      this.destinationPath("dummyfile.txt")
-    );
+    const paths = [
+      "src/main/frontend/app/main.js",
+      "src/main/frontend/.babelrc",
+      "src/main/frontend/package.json",
+      "src/main/frontend/webpack.config.js",
+      "src/main/java/com/launchacademy/giantleap/DemoApplication.java",
+      "src/main/resources/static/index.html",
+      "src/main/resources/application.properties",
+      ".mvn/wrapper/MavenWrapperDownloader.java",
+      ".mvn/wrapper/maven-wrapper.properties",
+      "mvnw",
+      "mvnw.cmd",
+      "pom.xml",
+      ".gitignore"
+    ];
+    paths.forEach(path => {
+      this.fs.copy(this.templatePath(path), this.destinationPath(path));
+    });
+
+    const resourceDirectories = [
+      "src/main/resources/db/migration",
+      "src/main/resources/templates"
+    ];
+
+    resourceDirectories.forEach(dir => {
+      this.fs.write(path.join(dir, ".gitkeep"), "");
+    });
   }
 
-  install() {
-    this.installDependencies();
-  }
+  install() {}
 };
