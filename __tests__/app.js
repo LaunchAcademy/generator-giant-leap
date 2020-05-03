@@ -11,6 +11,6 @@ describe("generator-giant-leap:app", () => {
   });
 
   it("creates files", () => {
-    assert.file(["dummyfile.txt"]);
+    assert.file(["src/main/frontend/package.json"]);
   });
 });
