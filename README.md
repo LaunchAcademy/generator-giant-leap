@@ -1,5 +1,7 @@
 # Giant Leap
 
+[![Coverage Status](https://coveralls.io/repos/github/LaunchAcademy/giant-leap/badge.svg?branch=master)](https://coveralls.io/github/LaunchAcademy/giant-leap?branch=master)
+
 Giant Leap is a Yeoman Generator that encourages the "Launch Academy Way" of building Spring Boot Applications.
 
 ## Installation

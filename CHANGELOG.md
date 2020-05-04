@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Fix security vulnerabilities of yarn packages
+- Add GitHub actions and coveralls
 
 ## [0.0.2] - 2020-05-03
 

@@ -78,6 +78,7 @@
     ]
   },
   "scripts": {
+    "ci": "jest --coverage",
     "pretest": "eslint .",
     "release": "release-it",
     "test": "jest",
