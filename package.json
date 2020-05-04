@@ -29,16 +29,17 @@
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "release-it": "^13.5.8",
+    "semantic-release": "^17.0.7",
     "semantic-release-cli": "^5.2.3",
     "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^1.7.0",
-    "semantic-release": "^17.0.7"
+    "yeoman-test": "^1.7.0"
   },
   "engines": {
     "npm": ">= 4.0.0"
   },
   "dependencies": {
     "chalk": "^2.1.0",
+    "lodash": "^4.17.15",
     "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
   },
